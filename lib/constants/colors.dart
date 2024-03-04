@@ -1,0 +1,11 @@
+const String mainColorLight = "202554";
+const String mainColorMid = "1D224C";
+const String mainColorDark = "1A1F45";
+const String white = "FFFFFF";
+const String red = "FF3131";
+const String green = "00BF63";
+const String grayComponentBackground = "E8E8E8";
+const String grayComponentText = "404040";
+const String backgroundColor = "FEF9FF";
+const String black = "00000";
+const String black1 = "040F0F";
