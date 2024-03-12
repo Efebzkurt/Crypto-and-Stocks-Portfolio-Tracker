@@ -1,6 +1,6 @@
 import 'package:hexcolor/hexcolor.dart';
 import 'package:portfolio_app/constants/colors.dart';
-import 'package:portfolio_app/selectionbox/selectionboxdata.dart';
+import 'package:portfolio_app/components/selectionbox/selectionboxdata.dart';
 import 'package:flutter/cupertino.dart';
 
 class SelectionBox extends StatefulWidget {

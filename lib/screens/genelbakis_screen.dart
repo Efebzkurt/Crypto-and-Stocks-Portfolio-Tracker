@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:portfolio_app/constants/colors.dart';
-import 'package:portfolio_app/selectionbox/selectionbox.dart';
+import 'package:portfolio_app/components/selectionbox/selectionbox.dart';
 
 class GenelBakisScreen extends StatefulWidget {
   const GenelBakisScreen({super.key});

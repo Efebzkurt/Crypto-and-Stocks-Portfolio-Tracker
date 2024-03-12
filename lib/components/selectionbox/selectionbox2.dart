@@ -1,7 +1,7 @@
 import 'package:hexcolor/hexcolor.dart';
 import 'package:portfolio_app/constants/colors.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:portfolio_app/selectionbox/selectionboxdata2.dart';
+import 'package:portfolio_app/components/selectionbox/selectionboxdata2.dart';
 
 class SelectionBox2 extends StatefulWidget {
   const SelectionBox2({super.key});

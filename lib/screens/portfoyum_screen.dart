@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:portfolio_app/constants/colors.dart';
-import 'package:portfolio_app/selectionbox/selectionbox2.dart';
+import 'package:portfolio_app/components/selectionbox/selectionbox2.dart';
 
 class PortfoyumScreen extends StatefulWidget {
   const PortfoyumScreen({super.key});

@@ -1,6 +1,6 @@
 import 'package:hexcolor/hexcolor.dart';
 import 'package:portfolio_app/constants/colors.dart';
-import 'package:portfolio_app/selectionbox/selectionbox3data.dart';
+import 'package:portfolio_app/components/selectionbox/selectionbox3data.dart';
 
 import 'package:flutter/cupertino.dart';
 

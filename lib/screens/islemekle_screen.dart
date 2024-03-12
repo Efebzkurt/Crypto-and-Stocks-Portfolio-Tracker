@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:portfolio_app/API/api.dart';
 import 'package:portfolio_app/constants/colors.dart';
-import 'package:portfolio_app/selectionbox/selectionbox3.dart';
+import 'package:portfolio_app/components/searchbar/searchbar.dart';
+import 'package:portfolio_app/model/datamodel.dart';
 
 class IslemekleScreen extends StatefulWidget {
   const IslemekleScreen({super.key});
@@ -14,35 +16,37 @@ class _IslemekleScreenState extends State<IslemekleScreen> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        debugShowCheckedModeBanner: false,
-        home: SafeArea(
-          child: Scaffold(
-            backgroundColor: HexColor(backgroundColor),
-            body: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 70),
-              child: Container(
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    color: HexColor(black),
-                  ),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Column(children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(0, 20, 100, 10),
-                    child: Text(
-                      "İşlem Ekle",
-                      style: TextStyle(
-                          color: HexColor(black),
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                  const SelectionBox3()
-                ]),
+      debugShowCheckedModeBanner: false,
+      home: SafeArea(
+        child: Scaffold(
+          backgroundColor: HexColor(backgroundColor),
+          body: Column(
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(top: 20),
+                child: SrcBar(),
               ),
-            ),
+              Expanded(
+                child: SingleChildScrollView(
+                  child: FutureBuilder<List<Data>>(
+                    future: postsFuture,
+                    builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const CircularProgressIndicator();
+                      } else if (snapshot.hasData) {
+                        final posts = snapshot.data!;
+                        return buildPosts(posts);
+                      } else {
+                        return const Text("No data available");
+                      }
+                    },
+                  ),
+                ),
+              ),
+            ],
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
